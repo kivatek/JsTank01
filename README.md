@@ -1,4 +1,4 @@
 JsTank01
 ========
 
-enchant.js�̃T���v���摜�̂�����Ԃ���\�����邾���̃v���O�����B
+enchant.jsのサンプル画像のうち戦車を二台表示するだけのプログラム。
