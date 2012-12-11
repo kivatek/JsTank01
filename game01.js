@@ -1,7 +1,7 @@
 enchant();
 
 var Tank = Class.create(Sprite, {
-	initialize: function(type,dir){
+	initialize: function(type,direction){
 		Sprite.call(this, 32, 32);
 		this.image = game.assets['js/images/chara3.png'];
 		if (type == 0) {
@@ -25,14 +25,22 @@ window.onload = function() {
 	game.onload = function() {
 		game.currentScene.backgroundColor = 'rgb(208, 255, 255)';
 
+		// 緑色の戦車（自分用）のスプライトを用意。
 		var myTank = new Tank(0, 0);
-		game.currentScene.addChild(myTank);
+		// 表示位置の指定
 		myTank.x = 128;
 		myTank.y = 160;
+		
+		// デザートカラーの戦車（敵用）のスプライトを用意。
 		var teki = new Tank(1, 0);
-		game.currentScene.addChild(teki);
+		// 表示位置の指定
 		teki.x = 192;
 		teki.y = 160;
+
+		// 用意したスプライトをシーンに関連づける。シーンはスクラッチで言えばステージのこと。
+		// これで表示されるようになる。
+		game.currentScene.addChild(teki);
+		game.currentScene.addChild(myTank);
 	};
 	game.start();
 };
