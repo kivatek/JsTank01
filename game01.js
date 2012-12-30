@@ -5,10 +5,10 @@ var Tank = Class.create(Sprite, {
 		Sprite.call(this, 32, 32);
 		this.image = game.assets['js/images/chara3.png'];
 		if (type == 0) {
-			// 緑色の戦車
+			// 緑色の戦車を表すフレーム番号
 			this.frame = 0;
 		} else {
-			// デザートカラーの戦車
+			// デザートカラーの戦車を表すフレーム番号
 			this.frame = 3;
 		}
 	}
